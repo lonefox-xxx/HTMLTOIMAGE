@@ -47,7 +47,6 @@ function getScreenshortwithSelecter(html, css, selecter = '.container', delay = 
 
       fs.unlink(pathtoimage, (err) => {
         if (err) console.error(`Error deleting file: ${err}`);
-        else console.log(`File ${filePath} deleted`);
       });
       resolve(true)
     } catch (error) {

@@ -15,6 +15,7 @@ function getScreenshortwithoutSelecter(html, css, delay = 1000, width = 1440, he
           "--single-process",
           "--no-zygote"
         ],
+
         executablePath: process.env.NODE_ENV == 'production' ? process.env.PUPPETEER_EXECUTABLE_PATH : puppeteer.executablePath()
       });
       const page = await browser.newPage();
@@ -36,7 +37,6 @@ function getScreenshortwithoutSelecter(html, css, delay = 1000, width = 1440, he
 
       fs.unlink(pathtoimage, (err) => {
         if (err) console.error(`Error deleting file: ${err}`);
-        else console.log(`File ${filePath} deleted`);
       });
 
       resolve(true)
