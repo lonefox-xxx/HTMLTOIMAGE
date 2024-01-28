@@ -1,11 +1,11 @@
 require('dotenv').config({path :'../.env'})
 const admin = require('firebase-admin');
 const { firebase } = require('../firebase');
+
 admin.initializeApp({
     credential: admin.credential.cert(firebase),
     storageBucket: process.env.BUCKET_URL
 });
-
 function Upload(pathtoimage, filename) {
     return new Promise(async (resolve, reject) => {
         try {
