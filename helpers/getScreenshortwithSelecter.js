@@ -50,6 +50,7 @@ function getScreenshortwithSelecter(html, css, selecter = '.container', delay = 
       });
       resolve(true)
     } catch (error) {
+      console.log(error)
       reject(error.message)
     }
   })

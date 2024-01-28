@@ -41,6 +41,7 @@ function getScreenshortwithoutSelecter(html, css, delay = 1000, width = 1440, he
 
       resolve(true)
     } catch (error) {
+      console.log(error)
       reject(error.message)
     }
   })
